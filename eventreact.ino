@@ -1,6 +1,7 @@
 //LED PIN
 int boardLed = D7;
 
+//Flag to trigger wave and pat
 bool publishtime = true;
 
 
@@ -9,7 +10,7 @@ void lightup(const char *event, const char *data);
 
 void setup()
 {
-  //board led is output
+ 	 //board led is output
 	pinMode(boardLed, OUTPUT);
 
 	// Subscribe to fake event
@@ -37,7 +38,7 @@ void loop()
 
 }
 
-// Now for the myHandler function, which is called when the cloud tells us that an event is published.
+//Function that tells the argon how to react to wave and pat 
 void lightup(const char *event, const char *data)
 {
 
